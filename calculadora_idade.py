@@ -6,7 +6,7 @@ class Calculadora:
         self._data_nascimento = data_nascimento
 
     def calcular_idade(self):
-        data_hoje = datetime.now().date()
+        data_hoje = date.today()
         data_nascimento = datetime.strptime(self._data_nascimento, '%d/%m/%Y').date()
         diferença_dias = (data_hoje - data_nascimento).days
         idade_exata = relativedelta(data_hoje, data_nascimento)
